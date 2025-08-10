@@ -16,7 +16,7 @@ const DynamicForm: React.FC<FormData> = (props) => {
             />
           ))}
         {isNaN(Number(input)) &&
-          "Please, check what you have enter in the INPUT field."}
+          "Please check the information you entered in the INPUT field."}
         {Number(input) < 0 && "INPUT field is not greater then 0."}
       </div>
 
@@ -30,7 +30,7 @@ const DynamicForm: React.FC<FormData> = (props) => {
             />
           ))}
         {isNaN(Number(textArea)) &&
-          "Please, check what you have enter in the TEXTAREA field."}
+          "Please check the information you entered in the TEXTAREA field."}
         {Number(textArea) < 0 && "TEXTAREA field is not greater then 0."}
       </div>
 
@@ -44,7 +44,7 @@ const DynamicForm: React.FC<FormData> = (props) => {
             />
           ))}
         {isNaN(Number(checkbox)) &&
-          "Please, check what you have enter in the CHECKBOX field."}
+          "Please check the information you entered in the CHECKBOX field."}
         {Number(checkbox) < 0 && "CHECKBOX field is not greater then 0."}
       </div>
     </form>
