@@ -15,12 +15,9 @@ const DynamicForm: React.FC<FormData> = (props) => {
               key={index}
             />
           ))}
-          {
-            isNaN(Number(input)) && "Please, check what you have enter in the INPUT field."
-          }
-          {
-            Number(input) < 0 && "INPUT field is not greater then 0."
-          }
+        {isNaN(Number(input)) &&
+          "Please, check what you have enter in the INPUT field."}
+        {Number(input) < 0 && "INPUT field is not greater then 0."}
       </div>
 
       <div className="flex flex-col gap-2">
@@ -32,29 +29,23 @@ const DynamicForm: React.FC<FormData> = (props) => {
               key={index}
             />
           ))}
-          {
-            isNaN(Number(textArea)) && "Please, check what you have enter in the TEXTAREA field."
-          }
-          {
-            Number(textArea) < 0 && "TEXTAREA field is not greater then 0."
-          }
+        {isNaN(Number(textArea)) &&
+          "Please, check what you have enter in the TEXTAREA field."}
+        {Number(textArea) < 0 && "TEXTAREA field is not greater then 0."}
       </div>
 
       <div className="flex flex-col gap-2">
         {Number(checkbox) > 0 &&
           Array.from({ length: Number(checkbox) }, (_, index) => (
             <input
-              type="checkbox"  
+              type="checkbox"
               placeholder={`textarea №${index + 1}`}
               key={index}
             />
           ))}
-          {
-            isNaN(Number(checkbox)) && "Please, check what you have enter in the CHECKBOX field."
-          }
-          {
-            Number(checkbox) < 0 && "CHECKBOX field is not greater then 0."
-          }
+        {isNaN(Number(checkbox)) &&
+          "Please, check what you have enter in the CHECKBOX field."}
+        {Number(checkbox) < 0 && "CHECKBOX field is not greater then 0."}
       </div>
     </form>
   );
